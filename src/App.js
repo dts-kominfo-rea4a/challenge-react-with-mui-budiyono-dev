@@ -31,7 +31,7 @@ const App = () => {
       <Box className='content'>
         <Box className='contacts'>
           <List>
-            {contacts.map((contact, i) => <Contact contact={contact} key={i}></Contact>)}
+            {contacts.map((contact, i) => <Contact data={contact} key={i}></Contact>)}
           </List>
         </Box>
         <Box className='contact-box'>

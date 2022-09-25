@@ -7,17 +7,16 @@ import React from 'react';
 
 // Kalian bisa membuat CSS sendiri di src/components/Contact.css
 // atau langsung tambahkan dengan sx={{}}
-const Contact = ({ contact }) => {
+const Contact = ({ data }) => {
   // Contact berisi foto, nama, telepon, dan email
   return (
     <>
       <ListItem alignItems="flex-start" sx={{ width: '100%', height: '20%', borderBottom: '1px solid grey' }} className="hover-contact">
         <ListItemAvatar sx={{ display: 'flex', textAlign: 'center', alignItems: 'center', justifyContent: 'center' }}>
-          <Avatar sx={{ height: '60px', width: '60px', margin: '20px' }} alt={contact.name} src={contact.photo} />
+          <Avatar sx={{ height: '60px', width: '60px', margin: '20px' }} alt={data.name} src={data.photo} />
         </ListItemAvatar>
         <ListItemText sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100%', heigh: '100%' }}
-          primary={contact.name}
-          // secondary={contact.phone + "\n" + contact.email}
+          primary={data.name}
           secondary={
             <React.Fragment>
               <Box sx={{ display: 'flex', flexDirection: 'column' }} component="span">
@@ -27,7 +26,7 @@ const Contact = ({ contact }) => {
                   variant="body2"
                   color="text.primary"
                 >
-                  {contact.phone}
+                  {data.phone}
                 </Typography>
                 <Typography
                   sx={{ display: 'inline' }}
@@ -35,7 +34,7 @@ const Contact = ({ contact }) => {
                   variant="body2"
                   color="text.primary"
                 >
-                  {contact.email}
+                  {data.email}
                 </Typography>
               </Box>
             </React.Fragment>
