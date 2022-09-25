@@ -3,8 +3,8 @@
 // dan Card
 // https://mui.com/material-ui/react-card/#basic-card
 
-import { Button, IconButton, TextField, Typography } from "@mui/material";
-import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
+import { Button, TextField, Typography } from "@mui/material";
+// import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import { useState } from "react";
 const contactObject = {
   "name": "",
@@ -30,11 +30,11 @@ const ContactForm = (props) => {
       [e.target.name]: e.target.value
     });
   }
-  const resetContactForm = () => {
-    if(window.confirm("Want to cancle")) {
-      setContact(contactObject);
-    }
-  }
+  // const resetContactForm = () => {
+  //   if(window.confirm("Want to cancle")) {
+  //     setContact(contactObject);
+  //   }
+  // }
   return (
     <>
       <form onSubmit={handleSubmit} name="contact-form" id="contact-form" style={{ backgroundColor: 'white', padding: '12px', margin: '10px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -42,9 +42,9 @@ const ContactForm = (props) => {
           <Typography variant="h6" gutterBottom>
             Add New
           </Typography>
-          <IconButton aria-label="delete" onClick={resetContactForm}>
+          {/* <IconButton aria-label="delete" onClick={resetContactForm}>
             <CancelOutlinedIcon color="error" />
-          </IconButton>
+          </IconButton> */}
         </div>
         <TextField id="outlined-search" name="name" label="Name" type="text" onChange={handleChange} value={contact.name} />
         <TextField id="outlined-search" name="phone" label="Phone" type="tel" onChange={handleChange} value={contact.phone} />
