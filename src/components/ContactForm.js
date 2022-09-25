@@ -18,13 +18,10 @@ const ContactForm = (props) => {
   const [contact, setContact] = useState(contactObject);
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submit form");
     props.addContact(contact);
     setContact(contactObject);
   }
   const handleChange = (e) => {
-    console.log(e.target.value);
-    console.log(e.target.name);
     setContact({
       ...contact,
       [e.target.name]: e.target.value
