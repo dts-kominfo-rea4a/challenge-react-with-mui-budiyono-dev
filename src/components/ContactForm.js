@@ -43,10 +43,10 @@ const ContactForm = (props) => {
             <CancelOutlinedIcon color="error" />
           </IconButton> */}
         </div>
-        <TextField id="outlined-search" name="name" label="Name" type="text" onChange={handleChange} value={contact.name} />
-        <TextField id="outlined-search" name="phone" label="Phone" type="tel" onChange={handleChange} value={contact.phone} />
-        <TextField id="outlined-search" name="email" label="Email" type="email" onChange={handleChange} value={contact.email} />
-        <TextField id="outlined-search" name="photo" label="Photo URL" type="url" onChange={handleChange} value={contact.photo} />
+        <TextField id="outlined-search" className="bg-grey" name="name" label="Name" type="text" onChange={handleChange} value={contact.name} />
+        <TextField id="outlined-search" className="bg-grey" name="phone" label="Phone" type="tel" onChange={handleChange} value={contact.phone} />
+        <TextField id="outlined-search" className="bg-grey" name="email" label="Email" type="email" onChange={handleChange} value={contact.email} />
+        <TextField id="outlined-search" className="bg-grey" name="photo" label="Photo URL" type="url" onChange={handleChange} value={contact.photo} />
         <Button variant="contained" type="submit">Save</Button>
       </form>
     </>

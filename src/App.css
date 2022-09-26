@@ -1,15 +1,22 @@
-.hover-contact:hover {
+.contact:hover {
     cursor: pointer;
-    background-color: antiquewhite;
+    background-color: #B2F9FC;
 }
 
-.bg-antiquewhite{
+.contact {
+    width: 100%;
+    /* height: 30%; */
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.bg-antiquewhite {
     background-color: antiquewhite;
 }
 
 .container {
     width: 100%;
     height: 100vh;
+    /* background-color: #EEEEEE; */
 }
 
 .header {
@@ -17,7 +24,7 @@
     height: 20%;
     padding: 10px 0;
     box-sizing: border-box;
-    border-bottom: 1px solid tomato;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .content {
@@ -26,7 +33,7 @@
     display: flex;
 }
 
-.contacts{
+.contacts {
     width: 30%;
     overflow: auto;
     max-height: 100%;
@@ -34,6 +41,19 @@
 }
 
 .contact-box {
-    border: 1px solid salmon;
+    border-left: 1px solid #EEEEEE;
     width: 70%;
+    box-sizing: border-box;
+}
+
+.bg-grey {
+    background-color: #EEEEEE;
+}
+
+.contact-des {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }

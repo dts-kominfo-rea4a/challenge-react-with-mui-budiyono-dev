@@ -11,11 +11,11 @@ const Contact = ({ data }) => {
   // Contact berisi foto, nama, telepon, dan email
   return (
     <>
-      <ListItem alignItems="flex-start" sx={{ width: '100%', height: '20%', borderBottom: '1px solid grey' }} className="hover-contact">
-        <ListItemAvatar sx={{ display: 'flex', textAlign: 'center', alignItems: 'center', justifyContent: 'center' }}>
-          <Avatar sx={{ height: '60px', width: '60px', margin: '20px' }} alt={data.name} src={data.photo} />
+      <ListItem alignItems="flex-start" className="contact">
+        <ListItemAvatar sx={{ margin: 'auto', minWidth: '75px'}}>
+          <Avatar sx={{ width: 56, height: 56 }} alt={data.name} src={data.photo} />
         </ListItemAvatar>
-        <ListItemText sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100%', heigh: '100%' }}
+        <ListItemText className='contact-des'
           primary={data.name}
           secondary={
             <React.Fragment>
